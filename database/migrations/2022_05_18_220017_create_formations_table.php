@@ -19,6 +19,7 @@ class CreateFormationsTable extends Migration
             $table -> date('start_date');
             $table -> date('end_date');
             $table -> date('description');
+            $table -> foreignId('etudiants_id') -> constrained() -> onDelete('cascade');
             $table->timestamps();
         });
     }

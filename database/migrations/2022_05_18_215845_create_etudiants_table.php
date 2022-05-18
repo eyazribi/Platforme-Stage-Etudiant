@@ -22,6 +22,7 @@ class CreateEtudiantsTable extends Migration
             $table -> string('logo');
             $table -> string('address');
             $table -> string('tel');
+            // $table -> foreignId('niveau_id') -> constrained() -> onDelete('cascade');
             $table ->timestamps();
         });
     }

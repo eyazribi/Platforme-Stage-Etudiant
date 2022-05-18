@@ -16,6 +16,7 @@ class CreateNiveauxTable extends Migration
         Schema::create('niveaux', function (Blueprint $table) {
             $table->id();
             $table -> string('nom_niv');
+            // $table -> foreignId('departements_id') -> constrained() -> onDelete('cascade');
             $table->timestamps();
         });
     }

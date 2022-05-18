@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Departement extends Model
 {
     use HasFactory;
+    public function niveaux() {
+      return $this -> hasMany(Niveau::class);
+    }
 }

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Awards extends Model
 {
     use HasFactory;
+    public function etudiant() {
+      return $this -> belongsTo(Etudiant::class);
+    }
 }

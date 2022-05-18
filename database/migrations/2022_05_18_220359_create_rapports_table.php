@@ -18,6 +18,7 @@ class CreateRapportsTable extends Migration
             $table -> string('link');
             $table -> boolean('status');
             $table -> date('date_return');
+            $table -> foreignId('etudiants_id') -> constrained() -> onDelete('cascade');
             $table->timestamps();
         });
     }
